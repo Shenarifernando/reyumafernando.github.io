@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#f7f3ee">
+<meta name="description" content="Reyuma Fernando — marketing, social media and brand storytelling portfolio.">
+<title>REYUMA FERNANDO — Ideas into impact</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,600;0,700;1,600;1,700&display=swap');
+:root{--night:#514b57;--paper:#faf7f2;--acid:#d9c9b8;--coral:#e7c9c8;--lilac:#c8c4df;--blue:#9aaebe;--muted:#817985;--line:rgba(81,75,87,.18);--serif:'Playfair Display',Georgia,serif;--sans:'DM Sans',Arial,sans-serif;--mono:'DM Mono',monospace}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--night);font-family:var(--sans);overflow-x:hidden;cursor:none}
+a,button{color:inherit}button{font:inherit}.cursor{position:fixed;z-index:99;pointer-events:none;width:18px;height:18px;border:1px solid var(--blue);border-radius:50%;transform:translate(-50%,-50%);mix-blend-mode:difference;transition:width .2s,height .2s,background .2s}
+.cursor.big{width:58px;height:58px;background:var(--acid);mix-blend-mode:difference}
+.progress{position:fixed;z-index:90;top:0;left:0;height:3px;width:0;background:var(--acid)}
+.noise{position:fixed;inset:0;pointer-events:none;z-index:50;opacity:.035;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.8'/%3E%3C/svg%3E")}
+.wrap{width:min(1240px,calc(100% - 64px));margin:auto}.topbar{height:82px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line);position:relative;z-index:10}
+.brand{font-weight:900;font-size:20px;letter-spacing:-.08em;text-decoration:none}.brand span{color:var(--acid)}.nav{display:flex;gap:27px}.nav a,.menu-btn{font:10px var(--mono);text-transform:uppercase;letter-spacing:.1em;text-decoration:none;color:var(--muted);transition:.2s}.nav a:hover{color:var(--acid)}.menu-btn{display:none;background:none;border:0}
+.hero{min-height:calc(100svh - 82px);display:grid;grid-template-columns:1.08fr .92fr;align-items:center;gap:4vw;padding:65px 0 90px;position:relative}
+.kicker,.label{font:10px var(--mono);letter-spacing:.16em;text-transform:uppercase;color:var(--acid)}
+.hero h1{font-size:clamp(76px,12vw,168px);line-height:.77;letter-spacing:-.105em;margin:28px 0 27px;font-weight:900}
+.hero h1 .last{color:var(--coral);font-family:var(--serif);font-style:italic;font-weight:600;letter-spacing:-.09em}
+.hero-copy{font:clamp(20px,2.4vw,30px)/1.35 var(--serif);max-width:560px}
+.hero-note{color:var(--muted);font-size:14px;line-height:1.8;max-width:470px}
+.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}.btn{border:1px solid var(--acid);padding:14px 18px;background:var(--acid);color:var(--night);font:10px var(--mono);letter-spacing:.1em;text-transform:uppercase;text-decoration:none;display:inline-flex;gap:12px;align-items:center;transition:transform .2s,background .2s}.btn:hover{transform:translateY(-4px);background:var(--coral);border-color:var(--coral)}.btn.ghost{background:transparent;color:var(--paper);border-color:var(--line)}.btn.ghost:hover{border-color:var(--acid);color:var(--acid)}
+.hero-art{height:min(68vw,610px);min-height:420px;position:relative;display:grid;place-items:center;isolation:isolate}
+.orbit{position:absolute;width:84%;aspect-ratio:1;border:1px solid rgba(215,244,91,.55);border-radius:50%;transform:rotate(-23deg)}
+.orbit:before,.orbit:after{content:"";position:absolute;border:1px solid rgba(185,168,255,.5);border-radius:50%;inset:11%;transform:rotate(48deg)}
+.orbit:after{inset:23%;border-color:rgba(255,112,94,.65);transform:rotate(-60deg)}
+.sticker{position:absolute;background:var(--acid);color:var(--night);font:10px var(--mono);padding:10px 13px;z-index:3;transform:rotate(-8deg);top:12%;right:3%}
+.blob{width:64%;aspect-ratio:.76;background:var(--lilac);border-radius:48% 52% 35% 65% / 43% 37% 63% 57%;transform:rotate(9deg);position:relative;z-index:1;display:grid;place-items:center;animation:morph 9s ease-in-out infinite alternate}
+.blob:before{content:"";position:absolute;inset:9%;border:1px solid rgba(23,21,43,.55);border-radius:inherit}
+.blobtext{font:clamp(38px,5vw,66px)/.9 var(--serif);color:var(--night);text-align:center;transform:rotate(-9deg);z-index:2}
+.tiny{position:absolute;z-index:3;font:9px var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--paper);bottom:12%;left:0;transform:rotate(-90deg);transform-origin:left}
+@keyframes morph{0%{border-radius:48% 52% 35% 65% / 43% 37% 63% 57%;transform:rotate(9deg)}100%{border-radius:63% 37% 57% 43% / 53% 63% 37% 47%;transform:rotate(-5deg)}}
+.ticker{overflow:hidden;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:18px 0;background:#e8dfd6;color:var(--night);white-space:nowrap;font:11px var(--mono);letter-spacing:.16em;text-transform:uppercase}
+.ticker-track{display:inline-block;animation:marquee 28s linear infinite}.ticker span{padding:0 28px}@keyframes marquee{to{transform:translateX(-50%)}}
+section{padding:120px 0;border-bottom:1px solid var(--line)}.section-top{display:flex;justify-content:space-between;gap:25px;align-items:flex-start;margin-bottom:55px}.index{font:11px var(--mono);color:var(--coral);letter-spacing:.12em}.section-title{font-size:clamp(43px,7vw,90px);letter-spacing:-.075em;line-height:.9;margin:12px 0 0;font-weight:800}.section-title em{font-family:var(--serif);font-weight:600;color:var(--lilac)}
+.about-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:9vw}.manifesto{font:clamp(27px,3.2vw,43px)/1.22 var(--serif);max-width:480px}.manifesto em{color:var(--acid)}.copy{font-size:15px;line-height:1.9;color:var(--muted)}.chips{display:flex;gap:8px;flex-wrap:wrap;margin-top:25px}.chip{border:1px solid var(--line);padding:9px 12px;color:var(--paper);font:9px var(--mono);text-transform:uppercase;letter-spacing:.08em}
+.identity-tabs{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 24px}.tab{background:transparent;border:1px solid var(--line);color:var(--muted);padding:12px 16px;font:10px var(--mono);text-transform:uppercase;cursor:none}.tab.active{background:var(--lilac);color:var(--night);border-color:var(--lilac)}.tab-panel{background:#24213c;border:1px solid var(--line);padding:clamp(25px,5vw,55px);min-height:230px;display:grid;grid-template-columns:.7fr 1.3fr;gap:4vw;align-items:center}.tab-panel h3{font:clamp(34px,5vw,58px)/.95 var(--serif);margin:0;color:var(--acid)}.tab-panel p{color:var(--muted);line-height:1.85;margin:0}
+.timeline{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}.job{background:#222039;border:1px solid var(--line);padding:27px;position:relative;transition:transform .25s,border-color .25s}.job:hover{transform:translateY(-7px) rotate(-.4deg);border-color:var(--acid)}.job:before{content:"";position:absolute;width:9px;height:9px;background:var(--coral);right:20px;top:20px;border-radius:50%}.job time{font:10px var(--mono);color:var(--acid)}.job h3{font:27px var(--serif);margin:18px 0 6px}.job .role{font:10px var(--mono);color:var(--lilac);text-transform:uppercase;letter-spacing:.08em}.job p{color:var(--muted);font-size:13px;line-height:1.8;margin-bottom:0}
+.education{display:grid;grid-template-columns:.8fr 1.2fr;gap:8vw}.edu-card{border-left:3px solid var(--acid);padding:0 0 0 24px}.edu-card h3{font:30px var(--serif);margin:8px 0}.edu-card p{color:var(--muted);font-size:14px;line-height:1.8}
+.thesis{background:var(--lilac);color:var(--night);padding:clamp(28px,5vw,62px);position:relative;overflow:hidden;margin-top:42px}.thesis:after{content:"RÓHE";position:absolute;right:-10px;bottom:-50px;font-size:clamp(90px,17vw,220px);font-weight:900;letter-spacing:-.1em;color:rgba(23,21,43,.08);pointer-events:none}.thesis .label{color:var(--blue)}.thesis h3{font:clamp(30px,4vw,52px)/1.12 var(--serif);max-width:850px;margin:25px 0;position:relative;z-index:1}.thesis p{max-width:730px;line-height:1.8;font-size:14px;position:relative;z-index:1}.thesis-tags{display:flex;gap:9px;flex-wrap:wrap;position:relative;z-index:1}.thesis-tags span{border:1px solid rgba(23,21,43,.35);padding:8px 10px;font:9px var(--mono);text-transform:uppercase}
+.creator-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:7vw;align-items:center}.creator-poster{min-height:440px;background:#e7d8d1;color:var(--night);padding:30px;display:flex;flex-direction:column;justify-content:space-between;transform:rotate(-2deg);position:relative}.creator-poster .poster-big{font:clamp(52px,8vw,98px)/.8 var(--serif);letter-spacing:-.08em}.poster-stamp{align-self:flex-end;border:1px solid var(--night);border-radius:50%;padding:20px;font:9px var(--mono);transform:rotate(13deg)}.creator-poster small{font:10px var(--mono);letter-spacing:.12em}
+.content-mockups{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:28px}.mock{aspect-ratio:3/4;padding:13px;display:flex;flex-direction:column;justify-content:space-between;color:var(--night);font:10px var(--mono);text-transform:uppercase;transition:transform .2s}.mock:hover{transform:translateY(-8px) rotate(2deg)}.mock:nth-child(1){background:#e6d8cc}.mock:nth-child(2){background:#d7dce4}.mock:nth-child(3){background:#f2c3a8}.mock b{font:26px/.9 var(--serif)}
+.skill-grid{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid var(--line)}.skill{padding:24px 18px;border-right:1px solid var(--line);min-height:165px}.skill:last-child{border:0}.skill .symbol{font:32px var(--serif);color:var(--coral)}.skill h3{font:10px var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--acid)}.skill p{font-size:12px;line-height:1.7;color:var(--muted)}
+.cert-list{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-top:28px}.cert{border-bottom:1px solid var(--line);padding:13px 0;display:flex;justify-content:space-between;gap:12px;font-size:13px}.cert span{color:var(--muted);text-align:right;font:10px var(--mono)}
+.contact{background:#e8dfd6;color:var(--night);padding:clamp(45px,8vw,100px);position:relative;overflow:hidden}.contact .label{color:var(--blue)}.contact h2{font-size:clamp(62px,11vw,140px);line-height:.78;letter-spacing:-.1em;margin:25px 0}.contact h2 em{font-family:var(--serif);font-weight:600;color:var(--coral)}.contact p{max-width:620px;line-height:1.8}.contact a{color:var(--night)}.contact .btn{background:var(--night);border-color:var(--night);color:var(--acid)}.contact-links{display:flex;gap:20px;flex-wrap:wrap;margin-top:25px;font:10px var(--mono);text-transform:uppercase}
+footer{padding:24px 0;display:flex;justify-content:space-between;color:var(--muted);font:9px var(--mono);letter-spacing:.1em;text-transform:uppercase}
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .7s ease,transform .7s ease}.reveal.visible{opacity:1;transform:translateY(0)}
+@media(max-width:800px){body{cursor:auto}.cursor{display:none}.wrap{width:calc(100% - 38px)}.nav{display:none;position:absolute;top:81px;left:0;right:0;background:var(--night);padding:25px;flex-direction:column;border-bottom:1px solid var(--line)}.nav.open{display:flex}.menu-btn{display:block;cursor:pointer}.hero{grid-template-columns:1fr;padding:60px 0 70px}.hero-art{min-height:360px;height:90vw}.about-grid,.education,.creator-grid{grid-template-columns:1fr}.tab-panel{grid-template-columns:1fr}.timeline{grid-template-columns:1fr}.skill-grid{grid-template-columns:repeat(2,1fr)}.skill:nth-child(2){border-right:0}.skill:nth-child(-n+2){border-bottom:1px solid var(--line)}section{padding:82px 0}.section-top{display:block}.section-top .index{display:block;margin-bottom:14px}}
+@media(max-width:480px){.wrap{width:calc(100% - 30px)}.hero h1{font-size:76px}.content-mockups{gap:6px}.mock{padding:8px}.mock b{font-size:20px}.cert-list{grid-template-columns:1fr}.cert{display:block}.cert span{display:block;text-align:left;margin-top:5px}.skill{padding:17px 12px}.skill-grid{grid-template-columns:1fr 1fr}footer{display:block;line-height:2.2}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{animation-duration:.01ms!important;transition-duration:.01ms!important}}
+
+/* SOFT LUXURY EDITION */
+body{cursor:auto}.cursor{display:none}
+.hero-art{isolation:isolate}
+.portrait-frame{position:absolute;z-index:1;width:66%;height:82%;top:8%;left:16%;overflow:hidden;border-radius:48% 48% 8px 8px;background:#e9e1d9;box-shadow:0 24px 70px rgba(81,75,87,.13);transform:rotate(2deg)}
+.portrait-frame img{width:100%;height:100%;object-fit:cover;object-position:center 25%}
+.cutout{position:absolute;z-index:2;height:78%;max-width:76%;object-fit:contain;object-position:bottom;bottom:0;right:-2%;filter:drop-shadow(0 12px 14px rgba(55,45,55,.12))}
+.orbit{border-color:rgba(154,174,190,.7)}.orbit:before{border-color:rgba(200,196,223,.8)}.orbit:after{border-color:rgba(231,201,200,.9)}
+.sticker{background:#d7dce4;color:#514b57}
+.kicker,.label{color:#8b788d}.index{color:#b98f9d}
+.hero h1 .last,.section-title em{color:#aa8799}
+.ticker{background:#e8dfd6;color:#514b57}
+.btn{background:#d9c9b8;border-color:#d9c9b8;color:#514b57}
+.btn:hover{background:#c8c4df;border-color:#c8c4df}
+.btn.ghost{color:#514b57;border-color:rgba(81,75,87,.3)}
+.btn.ghost:hover{color:#8b788d;border-color:#8b788d}
+.thesis{background:#e6e4ed!important;color:#514b57!important}
+.contact{background:#e5d5d3!important;color:#514b57!important}
+.contact .label{color:#8b788d}.contact h2 em{color:#a8798d}
+.contact .btn{background:#514b57;border-color:#514b57;color:#faf7f2}
+.creator-poster{background:#e8dfd6;color:#514b57}
+.poster-stamp{border-color:#514b57}
+.skill,.cert{border-color:var(--line)}
+.mock:nth-child(1){background:#e6d8cc}.mock:nth-child(2){background:#d7dce4}.mock:nth-child(3){background:#e7d5df}
+.media-gallery{grid-template-columns:repeat(3,minmax(0,1fr));align-items:stretch}
+.media-card{margin:0;min-width:0;display:flex;flex-direction:column;background:#f0ebe5;border:1px solid rgba(81,75,87,.12);padding:8px;box-shadow:0 10px 30px rgba(81,75,87,.07)}
+.media-card img,.media-card video{width:100%;height:260px;object-fit:cover;display:block;background:#e5dfe0}
+.cutout-card img{object-fit:contain;background:#e5dfe0}
+.media-card figcaption{font:8px var(--mono);letter-spacing:.08em;line-height:1.5;padding:10px 4px 3px;color:#817985}
+.copy{color:#6f6874}
+footer{color:#817985}
+@media(max-width:800px){.media-gallery{grid-template-columns:repeat(2,minmax(0,1fr))}.media-card video,.media-card img{height:230px}}
+@media(max-width:480px){.media-gallery{grid-template-columns:1fr}.media-card video,.media-card img{height:340px}.cutout{right:-6%;height:72%}}
+</style>
+</head>
+<body>
+<div class="progress" id="progress"></div><div class="cursor" id="cursor"></div><div class="noise"></div>
+<div class="wrap">
+<header class="topbar">
+<a class="brand" href="#home">REYUMA<span>✳</span></a>
+<nav class="nav" id="nav"><a href="#about">Point of view</a><a href="#experience">Experience</a><a href="#research">Research</a><a href="#creator">Creator studio</a><a href="#contact">Contact</a></nav>
+<button class="menu-btn" id="menuBtn" aria-label="Toggle navigation">MENU ☰</button>
+</header>
+<main id="home">
+<section class="hero" style="border:0;padding-top:65px">
+<div class="reveal visible"><div class="kicker">Independent thinking / Creative energy / Business sense</div><h1>REYUMA<br><span class="last">FERNANDO</span></h1><div class="hero-copy">Not just marketing.<br><em style="color:var(--acid)">Making people feel something.</em></div><p class="hero-note">International Business & Management student · Sales & Marketing experience · Digital content creator.</p><div class="actions"><a class="btn" href="#about">Enter my world <span>↘</span></a><a class="btn ghost" href="#contact">Let’s connect <span>↗</span></a></div></div>
+<div class="hero-art reveal visible"><div class="orbit"></div><div class="portrait-frame"><img src="assets/reyuma-portrait.jpg" alt="Reyuma outdoors in natural light"></div><img class="cutout" src="assets/reyuma-cutout.png" alt="" aria-hidden="true"><div class="sticker">CREATIVE<br>BY DEFAULT ✳</div><div class="tiny">Marketing · Culture · Connection</div></div>
+</section>
+<div class="ticker"><div class="ticker-track"><span>BRAND THINKING ✳</span><span>CONTENT CULTURE ✳</span><span>CREATIVE STRATEGY ✳</span><span>HUMAN CONNECTION ✳</span><span>BRAND THINKING ✳</span><span>CONTENT CULTURE ✳</span><span>CREATIVE STRATEGY ✳</span><span>HUMAN CONNECTION ✳</span></div></div>
+
+<section id="about"><div class="section-top reveal"><span class="index">01 / POINT OF VIEW</span><h2 class="section-title">A few sides.<br/><em>One perspective.</em></h2></div>
+<div class="about-grid reveal"><div class="manifesto">I’m interested in the space where <em>brands, people</em> and stories meet.</div><div><p class="copy">I’m in the final semester of my B.Sc. in International Business & Management at Hochschule Fulda. My experience spans sales and marketing, branch coordination, student-facing communication and account support.</p><p class="copy">Outside professional work, I create lifestyle and fashion content across TikTok, Instagram and YouTube. I like exploring how ideas travel, what earns attention and how a message can feel more human.</p><div class="chips"><span class="chip">Marketing</span><span class="chip">Content creation</span><span class="chip">Communication</span><span class="chip">Research</span><span class="chip">International business</span></div></div></div>
+<div style="margin-top:65px" class="reveal"><div class="label" style="margin-bottom:17px">Choose a lens /  tap to explore</div><div class="identity-tabs" role="tablist"><button class="tab active" data-tab="strategist" role="tab" aria-selected="true">01 Strategist</button><button class="tab" data-tab="creator" role="tab" aria-selected="false">02 Creator</button><button class="tab" data-tab="researcher" role="tab" aria-selected="false">03 Researcher</button></div><div class="tab-panel" id="tabPanel"><h3 id="tabTitle">The strategic lens.</h3><p id="tabText">I’ve worked across sales and marketing, branch operations and customer-facing roles. That mix helps me see marketing as part of a bigger business picture — connected to people, processes and outcomes.</p></div></div>
+</section>
+
+<section id="experience"><div class="section-top reveal"><span class="index">02 / EXPERIENCE ARCHIVE</span><h2 class="section-title">Different roles.<br/><em>Useful perspective.</em></h2></div>
+<div class="timeline">
+<article class="job reveal"><time>FEB 2026 — PRESENT</time><h3>EDAG Group</h3><div class="role">Sales & Marketing · Working student / internship experience</div><p>Maintained and quality-assured customer data in C4C CRM; supported customer database setup and migration; participated in SEO measures and sales marketing content; coordinated appointments and communication with the Lead Sales Manager.</p></article>
+<article class="job reveal"><time>APR 2023 — OCT 2023</time><h3>IgniterSpace Pvt. Ltd.</h3><div class="role">Branch Coordinator</div><p>Coordinated daily branch operations, managed budgets and monthly financial reporting, supported marketing campaigns and maintained communication between branch and head office.</p></article>
+<article class="job reveal"><time>NOV 2022 — MAR 2023</time><h3>Expert Campus Pvt. Ltd.</h3><div class="role">Student Advisor & Marketing Support</div><p>Managed inbound communications, supported marketing campaigns and created weekly student communication updates to improve information flow.</p></article>
+<article class="job reveal"><time>JAN 2021 — OCT 2022</time><h3>Wijaya Fashion Industry Pvt. Ltd.</h3><div class="role">Account Assistant</div><p>Supported daily accounting operations, verified payments, resolved account queries and assisted with reconciliations, journals and financial reporting.</p></article>
+</div></section>
+
+<section id="research"><div class="section-top reveal"><span class="index">03 / EDUCATION & RESEARCH</span><h2 class="section-title">Curiosity with<br/><em>a question behind it.</em></h2></div>
+<div class="education reveal"><div class="edu-card"><div class="label">Hochschule Fulda / 2024—Present</div><h3>B.Sc. International Business & Management</h3><p>Final semester. Focus areas include Marketing, Digital Business, International Strategic Management, Corporate Finance and Governance.</p></div><div><div class="label">Bachelor’s thesis / Fashion & digital influence</div><p class="copy">My thesis explores how different sources of brand content relate to trust and purchase intention.</p></div></div>
+<div class="thesis reveal"><div class="label">THE RÓHE RESEARCH QUESTION</div><h3>Owned vs. Earned: A Comparative Study of Brand-Owned Content and Micro-Influencer Content on Brand Trust and Purchase Intention.</h3><p><b>The case of emerging fashion brand Róhe.</b> The research compares brand-owned content with micro-influencer content and examines their relationship with brand trust and purchase intention. It connects my academic work with my interest in fashion, digital communication and influencer marketing.</p><div class="thesis-tags"><span>Owned content</span><span>Micro-influencers</span><span>Brand trust</span><span>Purchase intention</span></div></div>
+<div class="copy" style="margin-top:28px"><b>Additional education</b><br>Higher National Diploma in Business Management — Level 04, American College of Higher Education (May–November 2023) · Professional Certificate in Marketing, SLIM (January–April 2023) · G.C.E. Advanced Level, St. Joseph’s College, Negombo Branch (May 2018–October 2020).</div>
+</section>
+
+<section id="creator"><div class="section-top reveal"><span class="index">04 / CREATOR STUDIO</span><h2 class="section-title">The creator behind<br/><em>the strategist.</em></h2></div>
+<div class="creator-grid reveal"><div class="creator-poster"><small>PERSONAL CREATIVE PRACTICE / 001</small><div class="poster-big">STYLE.<br/>STORY.<br/><i>SCROLL.</i></div><div class="poster-stamp">MADE<br/>BY<br/>REYUMA</div><small>LIFESTYLE × FASHION × EVERYDAY INSPIRATION</small></div><div><p class="copy">I create independent content around lifestyle, fashion and everyday inspiration. TikTok, Instagram and YouTube are my creative spaces to explore formats, visual ideas and ways of communicating with an audience.</p><p class="copy">Content creation gives me a hands-on perspective on social media — thinking about the story, the format, the feeling and the people on the other side of the screen.</p><p class="copy">A first selection of personal visuals and video is included below. This space can grow into a curated showcase of campaigns, reels and content projects.</p><div class="content-mockups media-gallery"><figure class="media-card"><img src="assets/reyuma-portrait.jpg" alt="Lifestyle portrait"><figcaption>01 / LIFESTYLE · VISUAL STORYTELLING</figcaption></figure><figure class="media-card cutout-card"><img src="assets/reyuma-cutout.png" alt="Portrait cut-out"><figcaption>02 / PERSONAL BRAND · CREATIVE DIRECTION</figcaption></figure><figure class="media-card video-card"><video controls playsinline preload="metadata" poster="assets/reyuma-portrait.jpg"><source src="assets/creator-video.mp4" type="video/mp4">Your browser does not support video.</video><figcaption>03 / VIDEO · CREATOR CONTENT</figcaption></figure></div></div></div>
+</section>
+
+<section id="skills"><div class="section-top reveal"><span class="index">05 / THE TOOLKIT</span><h2 class="section-title">Skills, systems<br/><em>& curiosity.</em></h2></div>
+<div class="skill-grid reveal">
+<div class="skill"><div class="symbol">✳</div><h3>Digital & content</h3><p>SEO (on-page, keyword research, content optimisation); content strategy and creation (blog, social media, Canva); Google Analytics fundamentals; social media campaign support.</p></div>
+<div class="skill"><div class="symbol">↗</div><h3>Business & operations</h3><p>C4C CRM customer data; financial reporting and budget monitoring; customer communication; sales and marketing coordination.</p></div>
+<div class="skill"><div class="symbol">⌘</div><h3>Productivity</h3><p>Microsoft Office, advanced Excel for reporting, PowerPoint, Word and Google Workspace.</p></div>
+<div class="skill"><div class="symbol">◎</div><h3>Project coordination</h3><p>Asana, Trello, task coordination and cross-team communication.</p></div>
+</div>
+<div class="cert-list reveal"><div class="cert">SEO Certification <span>HubSpot Academy · Feb 2025</span></div><div class="cert">Introduction to SEO <span>Simplilearn · Mar 2025</span></div><div class="cert">Keyword Research Fundamentals <span>Simplilearn · Mar 2025</span></div><div class="cert">Predictive Project Management <span>PMI · Nov 2025</span></div></div>
+<div class="copy" style="margin-top:28px"><b>Languages</b> &nbsp; Sinhala — Native &nbsp; / &nbsp; English — C1 &nbsp; / &nbsp; German — B1</div>
+</section>
+
+<section id="contact" style="border:0;padding-bottom:45px"><div class="contact reveal"><div class="label">06 / THE NEXT CHAPTER</div><h2>Let’s make<br/><em>something</em><br/>matter.</h2><p>I’m interested in opportunities across marketing, social media, content and brand communication — especially where strategic thinking and creative execution belong in the same room.</p><a class="btn" href="mailto:reshi19fernando@gmail.com">Start a conversation ↗</a><div class="contact-links"><a href="https://www.linkedin.com/in/reyuma-fernando" target="_blank" rel="noopener">LinkedIn ↗</a><a href="mailto:reshi19fernando@gmail.com">Email ↗</a><span>TikTok / Instagram / YouTube — links to add</span></div></div></section>
+</main>
+<footer><span>© 2026 Reyuma Fernando</span><span>Business sense / Creative energy</span></footer>
+</div>
+<script>
+const cursor=document.getElementById('cursor');
+if(matchMedia('(pointer:fine)').matches){addEventListener('mousemove',e=>{cursor.style.left=e.clientX+'px';cursor.style.top=e.clientY+'px'});document.querySelectorAll('a,button,.job,.mock').forEach(el=>{el.addEventListener('mouseenter',()=>cursor.classList.add('big'));el.addEventListener('mouseleave',()=>cursor.classList.remove('big'))})}
+const progress=document.getElementById('progress');addEventListener('scroll',()=>{let h=document.documentElement.scrollHeight-innerHeight;progress.style.width=(h?scrollY/h*100:0)+'%'});
+const observer=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');observer.unobserve(e.target)}}),{threshold:.12});document.querySelectorAll('.reveal:not(.visible)').forEach(el=>observer.observe(el));
+const tabCopy={
+strategist:['The strategic lens.','I’ve worked across sales and marketing, branch operations and customer-facing roles. That mix helps me see marketing as part of a bigger business picture — connected to people, processes and outcomes.'],
+creator:['The creator instinct.','I make lifestyle and fashion content across social platforms. Creating gives me a hands-on view of formats, audience attention and the craft of turning an everyday idea into a story.'],
+researcher:['The research mindset.','My thesis compares brand-owned content with micro-influencer content, exploring their relationship with brand trust and purchase intention in the context of emerging fashion brand Róhe.']
+};
+document.querySelectorAll('.tab').forEach(btn=>btn.addEventListener('click',()=>{document.querySelectorAll('.tab').forEach(b=>{b.classList.remove('active');b.setAttribute('aria-selected','false')});btn.classList.add('active');btn.setAttribute('aria-selected','true');const c=tabCopy[btn.dataset.tab];document.getElementById('tabTitle').textContent=c[0];document.getElementById('tabText').textContent=c[1]}));
+document.getElementById('menuBtn').addEventListener('click',()=>document.getElementById('nav').classList.toggle('open'));
+document.querySelectorAll('.nav a').forEach(a=>a.addEventListener('click',()=>document.getElementById('nav').classList.remove('open')));
+</script>
+<!--
+EDITING YOUR MEDIA:
+1. Keep the assets folder beside this HTML file.
+2. Replace assets/creator-video.mp4 with your new MP4 video (keep the same filename).
+3. Replace assets/reyuma-portrait.jpg or assets/reyuma-cutout.png with updated images (keep filenames).
+4. To add another video, duplicate a <figure class="media-card video-card"> block and change its source filename.
+-->
+</body></html>
